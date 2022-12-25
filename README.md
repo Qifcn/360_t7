@@ -1,3 +1,12 @@
+
+## 20221225
+360T7 云编译
+相关代码来源于https://github.com/sdf8057/cloudbuild
+取消多余插件
+添加wg插件
+
+
+
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
 # Actions-OpenWrt
