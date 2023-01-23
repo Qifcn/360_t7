@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 360T7-hanwckf-mini
+name: 360T7-mini
 
 on:
   repository_dispatch:
@@ -103,7 +103,7 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-    - name: 整合固件
+    - name: 整合编译固件
       id: compile
       run: |
         cd openwrt
@@ -126,15 +126,15 @@ jobs:
         rm -rf sha256sums
         rm -rf version.buildinfo
         sleep 2
-        mv immortalwrt-mediatek-mt7981-mt7981-360-t7-108M-squashfs-sysupgrade.bin 360T7-hanwckf-108M-mini-sysupgrade.bin
-        mv immortalwrt-mediatek-mt7981-mt7981-360-t7-108M-squashfs-factory.bin 360T7-hanwckf-108M-mini-factory.bin
+        mv immortalwrt-mediatek-mt7981-mt7981-360-t7-108M-squashfs-sysupgrade.bin 360T7-108M-mini-sysupgrade.bin
+        mv immortalwrt-mediatek-mt7981-mt7981-360-t7-108M-squashfs-factory.bin 360T7-108M-mini-factory.bin
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "status=success" >> $GITHUB_OUTPUT
     - name: 上传固件
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: 360T7-hanwckf-mini-OpenWrt
+        name: 360T7-mini-OpenWrt
         path: ${{ env.FIRMWARE }}
 
     - name: 生成标签
@@ -146,8 +146,7 @@ jobs:
         release_tag="360T7-hanwckf-OpenWrt-mini-$time"
         release_name="360T7-hanwckf-OpenWrt-mini-$Rtime"
         echo "默认网关：192.168.100.1
-        默认密码：password
-        自带软件：mwan3，ramfree" >> release.txt
+        默认密码：password" >> release.txt
         echo "release_name=$release_name" >> $GITHUB_OUTPUT
         echo "release_tag=$release_tag" >> $GITHUB_OUTPUT
         echo "status=success" >> $GITHUB_OUTPUT
