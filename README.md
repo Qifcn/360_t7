@@ -1,53 +1,62 @@
 
-## 20221225
+## 20230124
 360T7 云编译
-相关代码来源于https://github.com/sdf8057/cloudbuild
-取消多余插件
-添加wg插件
+相关代码来源于https://github.com/hkk666/360T7
+添加WireGuard内核支持 arp绑定 ddns插件 uPnP插件 Socat插件
 
 
 
-**English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
+<div align="center"> 
 
-# Actions-OpenWrt
+<h1 align="center">
 
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
-![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
-![GitHub Forks](https://img.shields.io/github/forks/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Forks&logo=github)
+GitHub Actions For 360T7 OpenWrt
 
-A template for building OpenWrt with GitHub Actions
+</h1>
 
-## Usage
+[![GitHub Stars](https://img.shields.io/github/stars/hkk666/360T7?style=flat-square)](https://github.com/hkk666/360T7/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/hkk666/360T7?style=flat-square)](https://github.com/hkk666/360T7/network)
+[![GitHub Issues](https://img.shields.io/github/issues/hkk666/360T7?style=flat-square)](https://github.com/hkk666/360T7/issues)
+[![GitHub Contributors](https://img.shields.io/github/contributors/hkk666/360T7?style=flat-square)](https://github.com/hkk666/360T7/graphs/contributors)
+[![GitHub All Releases](https://img.shields.io/github/downloads/hkk666/360T7/total?style=flat-square)](https://github.com/hkk666/360T7/releases)
+[![GitHub License](https://img.shields.io/github/license/hkk666/360T7?style=flat-square)](https://github.com/hkk666/360T7/blob/main/LICENSE)
+![GitHub Release (latest SemVer)](https://img.shields.io/github/v/release/hkk666/360T7?style=flat-square)
 
-- Click the [Use this template](https://github.com/P3TERX/Actions-OpenWrt/generate) button to create a new repository.
-- Generate `.config` files using [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) source code. ( You can change it through environment variables in the workflow file. )
-- Push `.config` file to the GitHub repository.
-- Select `Build OpenWrt` on the Actions page.
-- Click the `Run workflow` button.
-- When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
+</div>
 
-## Tips
+![openwrt](doc/img/openwrt.png)
 
-- It may take a long time to create a `.config` file and build the OpenWrt firmware. Thus, before create repository to build your own firmware, you may check out if others have already built it which meet your needs by simply [search `Actions-Openwrt` in GitHub](https://github.com/search?q=Actions-openwrt).
-- Add some meta info of your built firmware (such as firmware architecture and installed packages) to your repository introduction, this will save others' time.
+<!--
+**该项目可云编译 360T7 OpenWrt**
 
-## Credits
+## 编译状态
 
-- [Microsoft Azure](https://azure.microsoft.com)
-- [GitHub Actions](https://github.com/features/actions)
-- [OpenWrt](https://github.com/openwrt/openwrt)
-- [Lean's OpenWrt](https://github.com/coolsnowwolf/lede)
-- [tmate](https://github.com/tmate-io/tmate)
-- [mxschmitt/action-tmate](https://github.com/mxschmitt/action-tmate)
-- [csexton/debugger-action](https://github.com/csexton/debugger-action)
-- [Cowtransfer](https://cowtransfer.com)
-- [WeTransfer](https://wetransfer.com/)
-- [Mikubill/transfer](https://github.com/Mikubill/transfer)
-- [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
-- [ActionsRML/delete-workflow-runs](https://github.com/ActionsRML/delete-workflow-runs)
-- [dev-drprasad/delete-older-releases](https://github.com/dev-drprasad/delete-older-releases)
-- [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
+<small>*绿色标志![](https://img.shields.io/badge/-passing-brightgreen)表示编译通过</small>
 
-## License
+<small>*红色标志![](https://img.shields.io/badge/-falling-red) 可能是编译失败，请进入 [Actions](https://github.com/hkk666/360T7/actions) 进一步查看详情</small>
 
-[MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © [**P3TERX**](https://p3terx.com)
+|源码来源|编译状态|备注|
+|:-:|:-:|:-:|
+|hanwckf|![Compile Status](https://img.shields.io/github/actions/workflow/status/hkk666/360T7/sub_directory/360T7-hanwckf.yml?branch=main)|360T7-hanwck|
+|hanwckf|![Compile Status](https://img.shields.io/github/actions/workflow/status/hkk666/360T7/sub_directory/360T7-hanwckf-mini.yml?branch=main)|360T7-hanwck-mini|
+|padavanonly|![Compile Status](https://img.shields.io/github/actions/workflow/status/hkk666/360T7/sub_directory/360T7-padavanonly.yml?branch=main)|360T7-padavanonly|
+|padavanonly|![Compile Status](https://img.shields.io/github/actions/workflow/status/hkk666/360T7/sub_directory/360T7-padavanonly-mini.yml?branch=main)|360T7-padavanonly-mini|
+
+**感谢大佬们的源码和付出（主要）**
+
+- [天灵](https://github.com/1715173329)
+- [lean](https://github.com/coolsnowwolf/lede)
+- [lorz](https://github.com/1orz/My-action)
+- [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)
+- [kenzok8](https://github.com/kenzok8/openwrt-packages)
+- [sdf8057](https://github.com/sdf8057)
+- [hanwckf](https://github.com/hanwckf/immortalwrt-mt798x)
+- [padavanonly](https://github.com/padavanonly/immortalwrtARM) 
+
+|          [lean](https://github.com/coolsnowwolf/lede)         |        [天灵](https://github.com/1715173329)               |              [lorz](https://github.com/1orz/My-action)               |              [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)               |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img width="60" src="https://avatars.githubusercontent.com/u/31687149?v=4"/> | <img width="60" src="https://avatars.githubusercontent.com/u/22235437?v=4" /> | <img width="60" src="https://avatars.githubusercontent.com/u/31647663?v=4" /> | <img width="60" src="https://avatars.githubusercontent.com/u/25927179?v=4" /> |
+|          [kenzok8](https://github.com/kenzok8/openwrt-packages)         |           [sdf8057](https://github.com/sdf8057)          |              [hanwckf](https://github.com/hanwckf/immortalwrt-mt798x)               |              [padavanonly](https://github.com/padavanonly/immortalwrtARM)               |
+| <img width="60" src="https://avatars.githubusercontent.com/u/39034242?v=4"/> | <img width="60" src="https://avatars.githubusercontent.com/u/54014465?v=4" /> | <img width="60" src="https://avatars.githubusercontent.com/u/27666983?v=4" /> | <img width="60" src="https://avatars.githubusercontent.com/u/83120842?v=4" /> |
+
+-->
