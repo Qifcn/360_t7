@@ -1,9 +1,9 @@
 
-## 20230124
+## 20230527
 360T7 云编译  
-相关代码来源于https://github.com/hkk666/360T7  
-1. 添加WireGuard内核支持 arp绑定 ddns插件 uPnP插件 Socat插件  
-2. 去掉无线驱动 内存占用大幅度降低
+相关代码来源https://github.com/P3TERX/Actions-OpenWrt
+1. 添加WireGuard内核支持 arp绑定 ddns插件 uPnP插件 Socat插件  ddns-go:5.2.1版本插件
+2. 
 
 
 
