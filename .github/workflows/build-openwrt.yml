@@ -131,7 +131,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: 360T7-mini-OpenWrt
+        name: cmiot_ax18-mini-OpenWrt
         path: ${{ env.FIRMWARE }}
 
     - name: 生成标签
