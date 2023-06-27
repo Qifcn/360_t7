@@ -1,5 +1,5 @@
 
-## 20230527
+## 20230627
 cmiot_ax18 云编译  1G内存
 相关代码来源
 https://github.com/P3TERX/Actions-OpenWrt
