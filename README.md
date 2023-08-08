@@ -1,3 +1,7 @@
+## 20230808
+去掉无线驱动 去掉WireGuard内核支持 因为没有无线驱动 wg添加接口会异常
+可用内存160mb
+![image](https://github.com/Qifcn/360_t7/assets/34029055/9369f94b-23e7-4257-8cf3-2137f2e2dbaa)
 
 ## 20230527
 360T7 云编译  
