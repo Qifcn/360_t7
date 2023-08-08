@@ -7,7 +7,7 @@
 360T7 云编译  
 相关代码来源https://github.com/P3TERX/Actions-OpenWrt
 1. 添加WireGuard内核支持 arp绑定 ddns插件 uPnP插件 Socat插件  ddns-go:5.2.1版本插件
-2. 
+
 
 
 
@@ -19,7 +19,6 @@ GitHub Actions For 360T7 OpenWrt
 </h1>
 
 ### 相关图片
-![Oqn4p.png](https://i.328888.xyz/2023/01/24/Oqn4p.png)
-![OqtNU.png](https://i.328888.xyz/2023/01/24/OqtNU.png)
-![OqWdv.png](https://i.328888.xyz/2023/01/24/OqWdv.png)
-![Oqku3.png](https://i.328888.xyz/2023/01/24/Oqku3.png)
+
+![image](https://github.com/Qifcn/360_t7/assets/34029055/c09ca5ad-a3c6-4ec2-a5f6-0790229bec23)
+![image](https://github.com/Qifcn/360_t7/assets/34029055/162e57fd-5f7c-4954-a0e5-462fa7e430f5)
